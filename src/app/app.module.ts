@@ -15,6 +15,8 @@ import { FacultyPageComponent } from './components/dynamic/faculty-page/faculty-
 import { FacilitiesPageComponent } from './components/dynamic/facilities-page/facilities-page.component';
 import { DormPageComponent } from './components/dynamic/dorm-page/dorm-page.component';
 import { HamPageComponent } from './components/dynamic/ham-page/ham-page.component';
+import { ProfilePageComponent } from './components/dynamic/profile-page/profile-page.component';
+import { MemePageComponent } from './components/dynamic/meme-page/meme-page.component';
 
 import { NavbarComponent } from './components/static/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -30,7 +32,11 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import {MatAutocompleteModule}from "@angular/material/autocomplete";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import {MatSelectModule} from '@angular/material/select';
-import {MatChipsModule} from '@angular/material/chips'
+import {MatChipsModule} from '@angular/material/chips';
+import { DoodlePageComponent } from './components/dynamic/doodle-page/doodle-page.component';
+import { GuidePageComponent } from './components/static/guide-page/guide-page.component';
+import { StudentOrgPageComponent } from './components/static/student-org-page/student-org-page.component';
+
 
 @NgModule({
   declarations: [
@@ -45,7 +51,12 @@ import {MatChipsModule} from '@angular/material/chips'
     FacilitiesPageComponent,
     DormPageComponent,
     HamPageComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProfilePageComponent,
+    MemePageComponent,
+    DoodlePageComponent,
+    GuidePageComponent,
+    StudentOrgPageComponent
   ],
   imports: [
     BrowserModule,
