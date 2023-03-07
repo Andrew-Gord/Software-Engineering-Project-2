@@ -12,6 +12,11 @@ import { DormPageComponent } from './components/dynamic/dorm-page/dorm-page.comp
 import { FacilitiesPageComponent } from './components/dynamic/facilities-page/facilities-page.component';
 import { FacultyPageComponent } from './components/dynamic/faculty-page/faculty-page.component';
 import { HamPageComponent } from './components/dynamic/ham-page/ham-page.component';
+import { DoodlePageComponent } from './components/dynamic/doodle-page/doodle-page.component';
+import { GuidePageComponent } from './components/static/guide-page/guide-page.component';
+import { StudentOrgPageComponent } from './components/static/student-org-page/student-org-page.component';
+import { ProfilePageComponent } from './components/dynamic/profile-page/profile-page.component';
+import { MemePageComponent } from './components/dynamic/meme-page/meme-page.component';
 
 
 const routes: Routes = [
@@ -25,6 +30,11 @@ const routes: Routes = [
   { path: "facilities", component: FacilitiesPageComponent },
   { path: "faculty", component: FacultyPageComponent },
   { path: "ham", component: HamPageComponent },
+  { path: "guide", component: GuidePageComponent },
+  { path: "doodle", component: DoodlePageComponent },
+  { path: "stuorg", component: StudentOrgPageComponent },
+  { path: "profile", component: ProfilePageComponent },
+  { path: "meme", component: MemePageComponent },
 
   { path: "**", redirectTo: ""},
 ];

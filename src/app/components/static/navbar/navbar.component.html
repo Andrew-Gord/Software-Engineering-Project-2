@@ -1,63 +1,42 @@
 <mat-toolbar color="primary">
     <span>
-      <a routerLink="/">
+      <a routerLink="/home">
         <span>NuPath</span>
       </a>
     </span>
-    <span>
-      <a 
-        routerLinkActive="active-link"
-        routerLink="/home"
-      >
-        <span>Home</span>
-      </a>
-      <a
-        routerLinkActive="active-link"
-        routerLink="/calendar"
-      >
-        <span>Calendar</span>
-      </a>
-      <a
-        routerLinkActive="active-link"
-        routerLink="/resources"
-      >
-        <span>Resources</span>
-      </a>
-      <a
-        routerLinkActive="active-link"
-        routerLink="/chat"
-      >
-        <span>Chat</span>
-      </a>
-      <a
-        routerLinkActive="active-link"
-        routerLink="/leaderboard"
-      >
-        <span>Leaderboard</span>
-      </a>
-      <a
-        routerLinkActive="active-link"
-        routerLink="/dorm"
-      >
-        <span>Dorm</span>
-      </a>
-      <a
-        routerLinkActive="active-link"
-        routerLink="/faculty"
-      >
-        <span>Faculty</span>
-      </a>
-      <a
-        routerLinkActive="active-link"
-        routerLink="/facilities"
-      >
-        <span>Facilities</span>
-      </a>
-      <a
-        routerLinkActive="active-link"
-        routerLink="/ham"
-      >
-        <span>HAM</span>
-      </a>
-    </span>
+
+
+    <div class="dropdown">
+      <button class="dropresource">Resources</button>
+      <div class="dropdown-content">
+        <a routerLinkActive="active-link"
+        routerLink="/resources">Area around NCF</a>
+        <a  routerLinkActive="active-link"
+        routerLink="/facilities">Facilities</a>
+        <a routerLinkActive="active-link"
+        routerLink="/faculty">Faculty</a>
+        <a routerLinkActive="active-link"
+        routerLink="/dorm">Dorms</a>
+        <a routerLinkActive="active-link"
+        routerLink="/ham">Hamilton cafe</a>
+        <a routerLinkActive="active-link"
+        routerLink="/guide">Insider guide</a>
+        <a routerLinkActive="active-link"
+        routerLink="/stuorg">Student Orginizations</a>
+      </div>
+    </div> 
+
+    <div class="dropdown">
+      <button class="dropresource">Not Resources</button>
+      <div class="dropdown-content">
+        <a routerLinkActive="active-link"
+        routerLink="/calendar">Calendar</a>
+        <a routerLinkActive="active-link"
+        routerLink="/chat">Forum</a>
+        <a routerLinkActive="active-link"
+        routerLink="/leaderboard">Leaderboard</a>
+        
+      </div>
+    </div> 
+    
   </mat-toolbar>
