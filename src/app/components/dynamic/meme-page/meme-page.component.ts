@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./meme-page.component.scss']
 })
 export class MemePageComponent {
-
+  
+  ngOnInit(){
+    import("./slideshow.js" as any);
+  }
 }
