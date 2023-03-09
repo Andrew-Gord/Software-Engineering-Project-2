@@ -6,12 +6,21 @@ mat-toolbar {
       color: white;
       text-decoration: none;
       &.active-link {
-        color: rgba(81, 78, 78, 0.348);
+        color: rgba(109, 105, 105, 0.348);
       }
       span {
         margin-left: 24px;
       }
     }
+  }
+
+  #complicated{
+    color: white;
+  }
+
+  *{
+    margin: 0px;
+    padding: 0;
   }
   .dropresource{
     background-color: rgb(63, 81, 181);
@@ -29,9 +38,9 @@ mat-toolbar {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    font-size: 15px;
   }
   .dropdown-content a {
     color: black;

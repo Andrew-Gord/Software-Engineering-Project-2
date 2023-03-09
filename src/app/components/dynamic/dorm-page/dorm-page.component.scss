@@ -1,0 +1,27 @@
+.iframe-container{
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; 
+      height: 0;
+    }
+    .iframe-container iframe{
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 40%;
+      height: 40%;
+    }
+
+.body{
+  margin-left: 5%;
+}
+.heading{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+#title{
+  margin-left: 25%;
+  margin-top: 2%;
+  font-size: 50px;
+}

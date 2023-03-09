@@ -17,10 +17,14 @@ import { GuidePageComponent } from './components/static/guide-page/guide-page.co
 import { StudentOrgPageComponent } from './components/static/student-org-page/student-org-page.component';
 import { ProfilePageComponent } from './components/dynamic/profile-page/profile-page.component';
 import { MemePageComponent } from './components/dynamic/meme-page/meme-page.component';
+import { ContactNovosComponent } from './components/dynamic/contact-novos/contact-novos.component';
+
+
 
 
 const routes: Routes = [
   { path: "", component: LoginPageComponent },
+  
   { path: "home", component: HomePageComponent },
   { path: "resources", component: NearbyResourcesPageComponent },
   { path: "calendar", component: CalendarPageComponent },
@@ -35,6 +39,7 @@ const routes: Routes = [
   { path: "stuorg", component: StudentOrgPageComponent },
   { path: "profile", component: ProfilePageComponent },
   { path: "meme", component: MemePageComponent },
+  {path: "connectNo", component: ContactNovosComponent},
 
   { path: "**", redirectTo: ""},
 ];

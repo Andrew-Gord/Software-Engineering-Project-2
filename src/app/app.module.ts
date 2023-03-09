@@ -36,6 +36,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import { DoodlePageComponent } from './components/dynamic/doodle-page/doodle-page.component';
 import { GuidePageComponent } from './components/static/guide-page/guide-page.component';
 import { StudentOrgPageComponent } from './components/static/student-org-page/student-org-page.component';
+import { ContactNovosComponent } from './components/dynamic/contact-novos/contact-novos.component';
 import { CalendarCompComponent } from './components/dynamic/calendar-comp/calendar-comp.component';
 
 
@@ -60,7 +61,8 @@ import { CalendarCompComponent } from './components/dynamic/calendar-comp/calend
     DoodlePageComponent,
     GuidePageComponent,
     StudentOrgPageComponent,
-    CalendarCompComponent
+    CalendarCompComponent,
+    ContactNovosComponent,
   ],
   imports: [
     BrowserModule,
