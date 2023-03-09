@@ -36,6 +36,9 @@ import {MatChipsModule} from '@angular/material/chips';
 import { DoodlePageComponent } from './components/dynamic/doodle-page/doodle-page.component';
 import { GuidePageComponent } from './components/static/guide-page/guide-page.component';
 import { StudentOrgPageComponent } from './components/static/student-org-page/student-org-page.component';
+import { CalendarCompComponent } from './components/dynamic/calendar-comp/calendar-comp.component';
+
+
 
 
 @NgModule({
@@ -56,7 +59,8 @@ import { StudentOrgPageComponent } from './components/static/student-org-page/st
     MemePageComponent,
     DoodlePageComponent,
     GuidePageComponent,
-    StudentOrgPageComponent
+    StudentOrgPageComponent,
+    CalendarCompComponent
   ],
   imports: [
     BrowserModule,
@@ -72,6 +76,10 @@ import { StudentOrgPageComponent } from './components/static/student-org-page/st
     MatListModule,
     MatToolbarModule,
     MatSelectModule,
+    CalendarModule.forRoot({
+      provide:DateAdapter,
+      useFactory:adapterFactory,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
