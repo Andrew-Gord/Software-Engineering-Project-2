@@ -20,8 +20,17 @@ import { MemePageComponent } from './components/dynamic/meme-page/meme-page.comp
 
 import { NavbarComponent } from './components/static/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CalendarModule, DateAdapter } from 'angular-calendar';
-import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import {
+  CalendarDateFormatter,
+  CalendarModule,
+  CalendarMomentDateFormatter,
+  DateAdapter,
+  MOMENT,
+} from 'angular-calendar';
+import { Moment } from 'moment';
+//import { DemoUtilsModule } from './demo-modules/demo-utils/module';
+//import { DemoComponent } from './demo-modules/additional-event-properties/component';
+import { adapterFactory } from 'angular-calendar/date-adapters/moment';
 
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
@@ -37,6 +46,16 @@ import { DoodlePageComponent } from './components/dynamic/doodle-page/doodle-pag
 import { GuidePageComponent } from './components/static/guide-page/guide-page.component';
 import { StudentOrgPageComponent } from './components/static/student-org-page/student-org-page.component';
 import { ContactNovosComponent } from './components/dynamic/contact-novos/contact-novos.component';
+<<<<<<< Updated upstream
+=======
+import { CalendarCompComponent } from './components/dynamic/calendar-comp/calendar-comp.component';
+import { SignUpComponent } from './components/dynamic/sign-up/sign-up.component';
+import * as moment from 'moment';
+
+export function momentAdapterFactory() {
+  return adapterFactory(moment);
+}
+>>>>>>> Stashed changes
 
 
 @NgModule({
@@ -58,7 +77,14 @@ import { ContactNovosComponent } from './components/dynamic/contact-novos/contac
     DoodlePageComponent,
     GuidePageComponent,
     StudentOrgPageComponent,
+<<<<<<< Updated upstream
     ContactNovosComponent
+=======
+    CalendarCompComponent,
+    ContactNovosComponent,
+    SignUpComponent,
+
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
@@ -74,9 +100,30 @@ import { ContactNovosComponent } from './components/dynamic/contact-novos/contac
     MatListModule,
     MatToolbarModule,
     MatSelectModule,
+<<<<<<< Updated upstream
     
+=======
+
+    CalendarModule.forRoot(
+      {
+        provide: DateAdapter,
+        useFactory: momentAdapterFactory,
+      },
+      {
+        dateFormatter: {
+          provide: CalendarDateFormatter,
+          useClass: CalendarMomentDateFormatter,
+        },
+      }
+    ),
+    
+
+>>>>>>> Stashed changes
   ],
-  providers: [],
+  providers: [{
+    provide: MOMENT,
+    useValue: moment,
+  },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

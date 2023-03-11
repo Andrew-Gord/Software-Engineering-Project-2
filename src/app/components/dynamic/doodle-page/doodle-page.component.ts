@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import("./sketch.js" as any);
 
 @Component({
   selector: 'app-doodle-page',
