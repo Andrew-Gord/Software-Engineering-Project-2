@@ -18,14 +18,15 @@ import { StudentOrgPageComponent } from './components/static/student-org-page/st
 import { ProfilePageComponent } from './components/dynamic/profile-page/profile-page.component';
 import { MemePageComponent } from './components/dynamic/meme-page/meme-page.component';
 import { ContactNovosComponent } from './components/dynamic/contact-novos/contact-novos.component';
+import { SignUpComponent } from './components/dynamic/sign-up/sign-up.component';
 
 
 
 
 const routes: Routes = [
-  { path: "", component: LoginPageComponent },
+  { path: "auth/login", component: LoginPageComponent },
   
-  { path: "home", component: HomePageComponent },
+  { path: "", component: HomePageComponent },
   { path: "resources", component: NearbyResourcesPageComponent },
   { path: "calendar", component: CalendarPageComponent },
   { path: "chat", component: ChatPageComponent },
@@ -40,6 +41,8 @@ const routes: Routes = [
   { path: "profile", component: ProfilePageComponent },
   { path: "meme", component: MemePageComponent },
   {path: "connectNo", component: ContactNovosComponent},
+  {path: "auth/signup",component:SignUpComponent},
+  {path: "doodle", component:DoodlePageComponent},
 
   { path: "**", redirectTo: ""},
 ];

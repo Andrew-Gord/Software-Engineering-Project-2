@@ -38,6 +38,7 @@ import { GuidePageComponent } from './components/static/guide-page/guide-page.co
 import { StudentOrgPageComponent } from './components/static/student-org-page/student-org-page.component';
 import { ContactNovosComponent } from './components/dynamic/contact-novos/contact-novos.component';
 import { CalendarCompComponent } from './components/dynamic/calendar-comp/calendar-comp.component';
+import { SignUpComponent } from './components/dynamic/sign-up/sign-up.component';
 
 
 
@@ -63,6 +64,7 @@ import { CalendarCompComponent } from './components/dynamic/calendar-comp/calend
     StudentOrgPageComponent,
     CalendarCompComponent,
     ContactNovosComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
