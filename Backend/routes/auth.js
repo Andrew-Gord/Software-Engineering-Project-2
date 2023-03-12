@@ -6,10 +6,7 @@ const router = express.Router();
 
 const User = require("../models/user");
 const authController = require('../controllers/auth');
-router.use((req,res,next)=>{
-    console.log('Time: ', Date.now());
-    next();
-})
+
 router.post(
     '/signup',[
         body('name').trim().not().isEmpty() ,
@@ -23,4 +20,10 @@ router.post(
         body('password').trim().isLength({min: 7 })
     ], authController.signup
 );
+
+router.post(
+    '/login',
+    authController.login
+    );
+    
 module.exports = router;
