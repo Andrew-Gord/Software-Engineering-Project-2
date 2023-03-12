@@ -1,1 +1,9 @@
-<p>leaderboard-page works!</p>
+<div class="left">
+    <h1>Leaderboard</h1>
+</div>
+<div class="right">
+    <h2>Tasks</h2>
+    <div *ngFor="let class of post" class="group">
+        <b>{{class.user}}</b> 
+    </div>
+</div>
