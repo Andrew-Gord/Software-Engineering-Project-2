@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
 }
-
 .main{
     width: 115.1%;
     background: linear-gradient(to top, rgba(2, 6, 37, 0.5)50%, rgba(2, 6, 37, 0.5)50%);
@@ -34,12 +33,6 @@
     float: left;
     height: 70px;
 }
-
-
-
-
-
-
 .btn{
     width: 100px;
     height: 40px;
@@ -113,8 +106,6 @@
 }
 
 .form{
-
-
     background: linear-gradient(to top, rgba(73, 79, 117, 0.8)50%, rgba(73, 79, 117, 0.8)50%);
     position: absolute;
     top: 5px;
@@ -122,7 +113,6 @@
     border-radius: 10px;
     padding: 25px;
 }
-
 
 .form h2{
 width: 220px;
@@ -134,9 +124,7 @@ background-color: #fff;
 border-radius: 10px;
 margin: 2px;
 padding: 8px;
-
 }
-
 .form input{
     width: 240px;
     height: 35px;
@@ -215,10 +203,8 @@ padding: 8px;
     padding-left: 14px;
     padding-top: 5px;
     transition: 0.3s ease;
-
 }
 
 .icons ion-icon:hover{
-    color: #FF7F50;
-    
+    color: #FF7F50;  
 }
