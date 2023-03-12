@@ -26,7 +26,6 @@ export class SignUpComponent {
   }
 
   signup():void{
-    console.log(this.signupForm.value);
     this.authService.signup(this.signupForm.value).subscribe((msg)=>console.log(msg));
   }
 }
