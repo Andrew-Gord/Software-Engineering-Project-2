@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { DormPageComponent } from './components/dynamic/dorm-page/dorm-page.comp
 import { HamPageComponent } from './components/dynamic/ham-page/ham-page.component';
 import { ProfilePageComponent } from './components/dynamic/profile-page/profile-page.component';
 import { MemePageComponent } from './components/dynamic/meme-page/meme-page.component';
+import { PostsComponent } from './components/dynamic/posts/posts.component';
 
 import { NavbarComponent } from './components/static/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -37,6 +39,10 @@ import { DoodlePageComponent } from './components/dynamic/doodle-page/doodle-pag
 import { GuidePageComponent } from './components/static/guide-page/guide-page.component';
 import { StudentOrgPageComponent } from './components/static/student-org-page/student-org-page.component';
 import { ContactNovosComponent } from './components/dynamic/contact-novos/contact-novos.component';
+import { CalendarCompComponent } from './components/dynamic/calendar-comp/calendar-comp.component';
+import { SignUpComponent } from './components/dynamic/sign-up/sign-up.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -58,11 +64,15 @@ import { ContactNovosComponent } from './components/dynamic/contact-novos/contac
     DoodlePageComponent,
     GuidePageComponent,
     StudentOrgPageComponent,
-    ContactNovosComponent
+    CalendarCompComponent,
+    ContactNovosComponent,
+    SignUpComponent,
+    PostsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
@@ -74,7 +84,11 @@ import { ContactNovosComponent } from './components/dynamic/contact-novos/contac
     MatListModule,
     MatToolbarModule,
     MatSelectModule,
-    
+    ReactiveFormsModule,
+    CalendarModule.forRoot({
+      provide:DateAdapter,
+      useFactory:adapterFactory,
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

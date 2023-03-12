@@ -1,0 +1,32 @@
+.group {
+    width: 90%;
+    margin:auto;
+    background: rgb(241, 238, 233);
+    padding: 15px;
+    margin-top:12px;
+    justify-content: center;
+}
+
+.left{
+    margin: auto;
+    width: 64%;
+    float: left;
+    padding: 15px;
+    margin-top:12px;
+    border: 2px solid black/*transparent*/;
+    border-radius: 15px;
+    justify-content: center;
+    text-align: center;
+}
+
+.right {
+    margin: auto;
+    width: 34%;
+    float: right;
+    padding: 15px;
+    margin-top:12px;
+    border: 2px solid black/*transparent*/;
+    border-radius: 15px;
+    justify-content: center;
+    text-align: center;
+}

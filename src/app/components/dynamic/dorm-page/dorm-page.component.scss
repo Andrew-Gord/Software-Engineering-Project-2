@@ -11,3 +11,17 @@
       width: 40%;
       height: 40%;
     }
+
+.body{
+  margin-left: 5%;
+}
+.heading{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+#title{
+  margin-left: 25%;
+  margin-top: 2%;
+  font-size: 50px;
+}
