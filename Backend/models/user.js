@@ -1,21 +1,21 @@
 const db = require("../util/database");
 
 module.exports = class User{
-    constructor(name,email,password){
-     this.name = name;
-    this.email=email;
-    this.password = password;
+    constructor(Name,Email,Password){
+     this.Name = Name;
+    this.Email=Email;
+    this.Password = Password;
     }
 
 static find(email){
     return db.execute(
-        'SELECT * FROM users WHERE email = ?', [email]
+        'SELECT * FROM User WHERE email = ?', [email]
     );
 }
 
     static save(user){
         return db.execute(
-            'INSERT INTO users (name,email,password) VALUES (?, ?, ?)', [user.name,user.email,user.password]
+            'INSERT INTO User (name,email,password) VALUES (?, ?, ?)', [user.name,user.email,user.password]
         );
     }
     

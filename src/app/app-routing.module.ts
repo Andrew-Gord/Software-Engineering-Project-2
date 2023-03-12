@@ -19,14 +19,15 @@ import { ProfilePageComponent } from './components/dynamic/profile-page/profile-
 import { MemePageComponent } from './components/dynamic/meme-page/meme-page.component';
 import { ContactNovosComponent } from './components/dynamic/contact-novos/contact-novos.component';
 import { SignUpComponent } from './components/dynamic/sign-up/sign-up.component';
+import { PostsComponent } from './components/dynamic/posts/posts.component';
 
 
 
 
 const routes: Routes = [
-  { path: "auth/login", component: LoginPageComponent },
+  { path: "", component: LoginPageComponent },
   
-  { path: "", component: HomePageComponent },
+  { path: "home", component: HomePageComponent },
   { path: "resources", component: NearbyResourcesPageComponent },
   { path: "calendar", component: CalendarPageComponent },
   { path: "chat", component: ChatPageComponent },
@@ -41,8 +42,9 @@ const routes: Routes = [
   { path: "profile", component: ProfilePageComponent },
   { path: "meme", component: MemePageComponent },
   {path: "connectNo", component: ContactNovosComponent},
-  {path: "auth/signup",component:SignUpComponent},
+  {path: "signup",component:SignUpComponent},
   {path: "doodle", component:DoodlePageComponent},
+  {path: "posts", component: PostsComponent},
 
   { path: "**", redirectTo: ""},
 ];

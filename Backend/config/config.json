@@ -1,6 +1,6 @@
 {
-    "host":"rdstest.crsgkzxmgz6x.us-east-2.rds.amazonaws.com",
+    "host":"aws-project02.cyahxioux9bs.us-east-2.rds.amazonaws.com",
     "user": "admin",
-    "database": "posts",
-    "password": "PasswordTest"
+    "database": "User_Login",
+    "password": "cheesecake123"
 }

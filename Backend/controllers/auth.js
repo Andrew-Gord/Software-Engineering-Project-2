@@ -4,15 +4,15 @@ const bcrypt = require('bcryptjs');
 
 exports.signup = async (req,res,next) =>{
     const errors = validationResult(req);
-
+    
     if (!errors.isEmpty()) return
 
     const name = req.body.name;
     const email = req.body.email;
     const password = req.body.password;
 
-    try{
-        const hashedPassword = await bcrypt.hash(password,12)
+    try{ 
+        const hashedPassword = await bcrypt.hash(password,12);
 
         const userDetails = {
             name:name,
@@ -25,6 +25,7 @@ exports.signup = async (req,res,next) =>{
         res.status(201).json({ message: 'User registered'})
     } catch(err){
         if (!err.statusCode){
+            console.log("error!");
             err.statusCode = 500;
         }
         next(err)
