@@ -7,12 +7,15 @@
     flex-direction: row;
   }
   .map{
-    margin-left: 15%;
+    margin-left: 25%;
+    margin-right: 20%;
+    padding-top: 2%;
+    padding-bottom: 1%;
 
   }
   .pageContent{
       display: flex;
-        justify-content: center;
+      justify-content: center;
       padding: 1%;
   }
   body{
@@ -22,3 +25,10 @@
     display: flex;
     justify-content: center;
   }
+
+.font_placement{
+padding-left: 4%;
+padding-bottom: 5%;                                                                                                                                    
+}
+     
+               
