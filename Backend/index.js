@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 const authRoutes = require('./routes/auth');
 const errorController = require('./controllers/error');
 const leaderboardRoutes = require('./routes/leaderboard');
-//const profileRoutes = require('./routes/profile');
-//const eventRoutes = require('./routes/event');
+const profileRoutes = require('./routes/profile');
+const eventRoutes = require('./routes/event');
 
 
 //import { express } from 'express';
@@ -26,8 +26,8 @@ app.use((req,res,next)=>{
 
 app.use('/auth', authRoutes);
 app.use('/leaderboard', leaderboardRoutes);
-//app.use('/profile', profileRoutes);
-//app.use('/event', eventRoutes);
+app.use('/profile', profileRoutes);
+app.use('/event', eventRoutes);
 
 app.use(errorController.get404);
 app.use(errorController.get500);

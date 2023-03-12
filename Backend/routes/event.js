@@ -8,7 +8,7 @@ const auth =  require('../middleware/auth');
 
 const router = express.Router();
 
-router.get('/', auth, eventController.fetchall);
+router.get('/', auth, eventController.fetchAll);
 
 router.post(
     '/',
@@ -17,7 +17,7 @@ router.post(
       body('title').trim().isLength({ min: 1 }).not().isEmpty(),
       body('rFreq').trim().isLength({ min: 1 }).not().isEmpty(),
     ],
-    eventController.postReview
+    eventController.postEvent
 );
 
 module.exports = router;

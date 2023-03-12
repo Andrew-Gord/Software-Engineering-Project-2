@@ -8,7 +8,7 @@ const auth =  require('../middleware/auth');
 
 const router = express.Router();
 
-router.get('/', auth, profileController.fetchall);
+router.get('/', auth, profileController.fetchAll);
 
 router.post(
     '/',

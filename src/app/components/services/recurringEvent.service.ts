@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient,  HttpHeaders} from '@angular/common/http';
-import { RecurringEvent } from '../types/Recurring.interface';
+import { RecurringEvent } from '../models/Recurring.interface';
 
 
 @Injectable({providedIn: 'root'})
@@ -16,7 +16,7 @@ export class RecurringEventService{
 
   getEvent(): Observable<RecurringEvent[]> {
     return this.http.get<RecurringEvent[]>(
-      'http://localhost:3306/calendar'
+      'http://localhost:3000/calendar'
     );
   }
 
@@ -24,14 +24,14 @@ export class RecurringEventService{
     formData: Partial<RecurringEvent>,
   ): Observable<RecurringEvent> {
     return this.http.post<RecurringEvent>(
-      'http://localhost:3306/calendar',
+      'http://localhost:3000/calendar',
       {
-        /*start: formData.start,
-        end: formData.end,
         title: formData.title,
-        day: formData.day,*/
+        freq: formData.freq,
+        bymonth: formData.bymonth,
+        bymonthday: formData.bymonthday,
+        byweekday: formData.byweekday,
       },
-      
     );
   }
 }

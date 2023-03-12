@@ -26,10 +26,13 @@ export class LeaderboardService{
     return this.http.post<LeaderboardItem>(
       'http://localhost:3000/leaderboard',
       {
-        /*start: formData.start,
-        end: formData.end,
-        title: formData.title,
-        day: formData.day,*/
+        user: formData.user,
+        completePoints: formData.completePoints,
+        classAdd: formData.classAdd,
+        dormChoice: formData.classAdd,
+        hamVisit: formData.hamVisit,
+        facilVis: formData.facilVis,
+        faculCheck: formData.faculCheck,
       },
       
     );
