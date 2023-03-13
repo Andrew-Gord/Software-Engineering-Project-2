@@ -12,9 +12,13 @@ module.exports = class Leaderboard{
   
       static fetchAll()
       {
-          return db.execute('SELECT * FROM User_Login.leaderboard ')
+          return db.execute('SELECT * FROM leaderboard ')
       }
-   
+      
+      static update(post){
+          return db.execut(`UPDATE leaderboard SET ${post.column} = 1 WHERE id=(?)`,[post.id]);
+      }
+
       static save(post){
           return db.execute(
             'INSERT INTO leaderboard(username,classAdd,dormChoice,hamVisit,facilVis,faculCheck) VALUES(?,?,?,?,?,?)',

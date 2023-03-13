@@ -10,13 +10,13 @@ const router = express.Router();
 
 router.get('/', auth, leaderboardController.fetchAll);
 
-router.post(
-    '/',
+router.post('/',
     [
       auth,
-      body('user').trim().isLength({ min: 1 }).not().isEmpty(),
+      body('column').trim().isLength({ min: 1 }).not().isEmpty(),
+      body('id').trim().isLength({max:1}).not().isEmpty(),
     ],
-    leaderboardController.postLeaderboard
+    leaderboardController.update
   );
 
 

@@ -14,12 +14,7 @@ export class LeaderboardPageComponent implements OnInit {
   constructor(private lbService: LeaderboardService){}
 
   ngOnInit() {
-    console.log("Leaderboard Fetch");
-    this.lbService.getLeader().subscribe(posts => {
-      this.post = posts
-      this.lbService.LeaderData = posts
-      console.log(this.post);
-    });
+    this.lbService.fetchAll();
   }
 
 

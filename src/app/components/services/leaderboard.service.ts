@@ -2,39 +2,36 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient,  HttpHeaders} from '@angular/common/http';
 import { LeaderboardItem } from '../models/Leaderboard.interface';
+import { first,tap,catchError } from 'rxjs';
+import { User } from '../models/User';
+import { ErrorHandlerService } from './error-handler.service';
 
 
 @Injectable({providedIn: 'root'})
 export class LeaderboardService{
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private errorHandlerService:ErrorHandlerService) {}
   public LeaderData!: LeaderboardItem[]
+
+  private url = 'http://localhost:3000/leaderboard';
 
   httpOptions: { headers: HttpHeaders } = {
     headers: new HttpHeaders({ "Content-Type": "application/json" }),
   };
 
-  getLeader(): Observable<LeaderboardItem[]> {
-    return this.http.get<LeaderboardItem[]>(
-      'http://localhost:3000/leaderboard'
-    );
+  fetchAll(): Observable<LeaderboardItem[]> {
+    console.log("check");
+    return this.http.get<LeaderboardItem[]>(this.url);
   }
 
-  createLeader(
-    formData: Partial<LeaderboardItem>,
-  ): Observable<LeaderboardItem> {
-    return this.http.post<LeaderboardItem>(
-      'http://localhost:3000/leaderboard',
+  updateBoard(formData: string,userId: User["id"]): Observable<LeaderboardItem> {
+    console.log(userId);
+    return this.http.post<LeaderboardItem>(this.url,
       {
-        user: formData.user,
-        completePoints: formData.completePoints,
-        classAdd: formData.classAdd,
-        dormChoice: formData.classAdd,
-        hamVisit: formData.hamVisit,
-        facilVis: formData.facilVis,
-        faculCheck: formData.faculCheck,
-      },
-      
+        column:formData,
+        id:userId
+      },this.httpOptions).pipe(first(),
+        catchError(this.errorHandlerService.handleError<LeaderboardItem>("updateBoard"))
     );
   }
 }

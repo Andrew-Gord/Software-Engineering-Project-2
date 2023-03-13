@@ -1,4 +1,6 @@
 export interface LeaderboardItem {
+    id:number;
+    column:string;
     user: string;
     completePoints: number;
     classAdd: boolean; 

@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const authRoutes = require('./routes/auth');
 const postRoutes = require('./routes/posts');
+const leadRoutes = require('./routes/leaderboard')
 const errorController = require('./controllers/error');
 
 
@@ -23,6 +24,8 @@ app.use((req,res,next)=>{
 });
 
 app.use('/auth', authRoutes);
+
+app.use('/leaderboard',leadRoutes);
 app.use('/post', postRoutes);
 
 app.use(errorController.get404);
