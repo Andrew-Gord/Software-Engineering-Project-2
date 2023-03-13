@@ -42,6 +42,7 @@ import { ContactNovosComponent } from './components/dynamic/contact-novos/contac
 import { CalendarCompComponent } from './components/dynamic/calendar-comp/calendar-comp.component';
 import { SignUpComponent } from './components/dynamic/sign-up/sign-up.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CatalystComponent } from './components/static/catalyst/catalyst.component';
 
 
 
@@ -68,6 +69,7 @@ import { HttpClientModule } from '@angular/common/http';
     ContactNovosComponent,
     SignUpComponent,
     PostsComponent,
+    CatalystComponent,
   ],
   imports: [
     BrowserModule,

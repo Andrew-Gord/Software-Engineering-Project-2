@@ -20,6 +20,7 @@ import { MemePageComponent } from './components/dynamic/meme-page/meme-page.comp
 import { ContactNovosComponent } from './components/dynamic/contact-novos/contact-novos.component';
 import { SignUpComponent } from './components/dynamic/sign-up/sign-up.component';
 import { PostsComponent } from './components/dynamic/posts/posts.component';
+import { CatalystComponent } from './components/static/catalyst/catalyst.component';
 
 
 
@@ -45,6 +46,7 @@ const routes: Routes = [
   {path: "signup",component:SignUpComponent},
   {path: "doodle", component:DoodlePageComponent},
   {path: "posts", component: PostsComponent},
+  {path: "catalyst", component: CatalystComponent},
 
   { path: "**", redirectTo: ""},
 ];
