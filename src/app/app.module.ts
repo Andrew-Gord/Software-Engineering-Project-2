@@ -41,8 +41,9 @@ import { StudentOrgPageComponent } from './components/static/student-org-page/st
 import { ContactNovosComponent } from './components/dynamic/contact-novos/contact-novos.component';
 import { CalendarCompComponent } from './components/dynamic/calendar-comp/calendar-comp.component';
 import { SignUpComponent } from './components/dynamic/sign-up/sign-up.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 
+import { AuthInterceptorService } from './components/services/auth-interceptor.service';
 
 
 @NgModule({
@@ -90,7 +91,13 @@ import { HttpClientModule } from '@angular/common/http';
       useFactory:adapterFactory,
     })
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

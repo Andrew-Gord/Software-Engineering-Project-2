@@ -7,11 +7,11 @@ module.exports = class User{
     this.Password = Password;
     }
 
-static find(email){
-    return db.execute(
-        'SELECT * FROM User WHERE email = ?', [email]
-    );
-}
+    static find(email){
+        return db.execute(
+            'SELECT * FROM User WHERE email = ?', [email]
+        );
+    }
 
     static save(user){
         return db.execute(
@@ -20,3 +20,4 @@ static find(email){
     }
     
 };
+

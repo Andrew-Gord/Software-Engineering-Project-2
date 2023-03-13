@@ -20,7 +20,6 @@ exports.postLeaderboard = async (req, res, next) => {
   if (!errors.isEmpty()) return;
   
   const user = req.body.user;
-  const completePoints = req.body.completePoints;
   const classAdd = req.body.classAdd;
   const dormChoice = req.body.dormChoice;
   const hamVisit = req.body.hamVisit;
@@ -30,7 +29,6 @@ exports.postLeaderboard = async (req, res, next) => {
   try {
     const post = {
         user: user,
-        completePoints: completePoints,
         classAdd: classAdd,
         dormChoice: dormChoice,
         hamVisit: hamVisit,
