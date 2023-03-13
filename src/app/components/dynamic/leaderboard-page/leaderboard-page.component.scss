@@ -1,10 +1,12 @@
 .group {
     width: 90%;
     margin:auto;
-    background: rgb(241, 238, 233);
+    background: lightgoldenrodyellow;
     padding: 15px;
     margin-top:12px;
     justify-content: center;
+    border: 2px solid black/*transparent*/;
+    border-radius: 15px;
 }
 
 .left{
@@ -13,6 +15,7 @@
     float: left;
     padding: 15px;
     margin-top:12px;
+    background: lightpink;
     border: 2px solid black/*transparent*/;
     border-radius: 15px;
     justify-content: center;
@@ -29,4 +32,5 @@
     border-radius: 15px;
     justify-content: center;
     text-align: center;
+    background: lightblue;
 }
