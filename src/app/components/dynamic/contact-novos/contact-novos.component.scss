@@ -1,8 +1,4 @@
-.CampusMap{
-      border: 3px solid #73AD21;
-      margin-left: 30px;
-  }
-  
+
   .pageContent{
       display: flex;
       padding: 1%;
@@ -10,3 +6,63 @@
   body{
     margin-left: 5%;
   }
+  .header{
+
+    padding-left: 37%;
+    padding-right: 20%;
+
+  }
+
+  .font_placement{
+   padding-left: .5%;
+   color: 	#6A5ACD;
+
+  }
+ 
+.insta-icon {
+    --icon-size:25px;
+    position: relative;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    background: radial-gradient( circle at 33% 100%, 
+                                #f3d373  4%, #f15245 30%,
+                                #d92e7f 62%, #9b36b7 85%, #515ecf);
+    border-radius: 25%;
+}
+.insta-icon > span {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    right: 28px;
+    top: 30px;
+}
+.insta-icon:after,.insta-icon:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(var(--icon-size)/1.5);
+    height: calc(var(--icon-size)/1.5);
+    border: calc(var(--icon-size)/15) solid #fff;
+    transform: translate(-50%, -50%);
+}
+.insta-icon:after {
+    width: calc(var(--icon-size)/3);
+    height: calc(var(--icon-size)/3);
+    border-radius: 50%;
+}
+.insta-icon:before {
+    border-radius: 25%;
+    padding-bottom: 10%;
+}
+
+.social_media{
+
+  padding-left: 30%;
+  
+  padding-top: 5px;
+}
+
