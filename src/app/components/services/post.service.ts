@@ -11,7 +11,7 @@ import { Post } from '../models/Post';
   providedIn: 'root'
 })
 export class PostService {
-  private url = "http://localhost:3000/post";
+  private url = "https://softengback-production.up.railway.app/post";
   httpOptions: {headers:HttpHeaders} = {
     headers: new HttpHeaders({"Content-Type":"application/json"})
   }

@@ -15,7 +15,7 @@ export class LeaderboardService{
   constructor(private http: HttpClient,private errorHandlerService:ErrorHandlerService) {}
   
 
-  private url = 'http://localhost:3000/leaderboard';
+  private url = 'https://softengback-production.up.railway.app/leaderboard';
 
   httpOptions: { headers: HttpHeaders } = {
     headers: new HttpHeaders({ "Content-Type": "application/json" }),

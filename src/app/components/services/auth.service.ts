@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  private url = "http://localhost:3000/auth";
+  private url = "https://softengback-production.up.railway.app/auth";
 
   isUserLoggedIn$ = new BehaviorSubject<boolean>(false);
   userId: User["id"];
@@ -35,7 +35,7 @@ export class AuthService {
     return this.http.post( `${this.url}/login`,{email, password}, this.httpOptions)
     .pipe(
       first(Object),
-       tap( (tokenObject : {token: string; userId:User["id"]}) =>  {
+       tap((tokenObject : {token: string; userId:User["id"]}) =>  {
         this.userId = tokenObject.userId;
         localStorage.setItem("token",tokenObject.token);
         this.isUserLoggedIn$.next(true);
