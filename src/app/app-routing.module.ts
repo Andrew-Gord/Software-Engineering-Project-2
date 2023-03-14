@@ -21,6 +21,8 @@ import { ContactNovosComponent } from './components/dynamic/contact-novos/contac
 import { SignUpComponent } from './components/dynamic/sign-up/sign-up.component';
 import { PostsComponent } from './components/dynamic/posts/posts.component';
 import { CatalystComponent } from './components/static/catalyst/catalyst.component';
+import { EasterEggComponent } from './components/static/easter-egg/easter-egg.component';
+
 
 
 
@@ -47,6 +49,7 @@ const routes: Routes = [
   {path: "doodle", component:DoodlePageComponent},
   {path: "posts", component: PostsComponent},
   {path: "catalyst", component: CatalystComponent},
+  {path: "easter", component: EasterEggComponent},
 
   { path: "**", redirectTo: ""},
 ];

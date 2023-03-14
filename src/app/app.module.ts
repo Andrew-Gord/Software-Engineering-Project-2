@@ -43,6 +43,7 @@ import { CalendarCompComponent } from './components/dynamic/calendar-comp/calend
 import { SignUpComponent } from './components/dynamic/sign-up/sign-up.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CatalystComponent } from './components/static/catalyst/catalyst.component';
+import { EasterEggComponent } from './components/static/easter-egg/easter-egg.component';
 
 
 
@@ -70,6 +71,7 @@ import { CatalystComponent } from './components/static/catalyst/catalyst.compone
     SignUpComponent,
     PostsComponent,
     CatalystComponent,
+    EasterEggComponent,
   ],
   imports: [
     BrowserModule,
