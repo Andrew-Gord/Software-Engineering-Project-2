@@ -12,7 +12,7 @@ import { DormPageComponent } from './components/dynamic/dorm-page/dorm-page.comp
 import { FacilitiesPageComponent } from './components/dynamic/facilities-page/facilities-page.component';
 import { FacultyPageComponent } from './components/dynamic/faculty-page/faculty-page.component';
 import { HamPageComponent } from './components/dynamic/ham-page/ham-page.component';
-import { DoodlePageComponent } from './components/dynamic/doodle-page/doodle-page.component';
+import { DoodlePageComponent } from './components/dynamic/pictures/doodle-page.component';
 import { GuidePageComponent } from './components/static/guide-page/guide-page.component';
 import { StudentOrgPageComponent } from './components/static/student-org-page/student-org-page.component';
 import { ProfilePageComponent } from './components/dynamic/profile-page/profile-page.component';
@@ -20,6 +20,9 @@ import { MemePageComponent } from './components/dynamic/meme-page/meme-page.comp
 import { ContactNovosComponent } from './components/dynamic/contact-novos/contact-novos.component';
 import { SignUpComponent } from './components/dynamic/sign-up/sign-up.component';
 import { PostsComponent } from './components/dynamic/posts/posts.component';
+import { CatalystComponent } from './components/static/catalyst/catalyst.component';
+import { EasterEggComponent } from './components/static/easter-egg/easter-egg.component';
+
 
 
 
@@ -45,6 +48,8 @@ const routes: Routes = [
   {path: "signup",component:SignUpComponent},
   {path: "doodle", component:DoodlePageComponent},
   {path: "posts", component: PostsComponent},
+  {path: "catalyst", component: CatalystComponent},
+  {path: "easter", component: EasterEggComponent},
 
   { path: "**", redirectTo: ""},
 ];
