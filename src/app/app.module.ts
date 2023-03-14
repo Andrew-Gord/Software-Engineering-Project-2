@@ -35,13 +35,15 @@ import {MatAutocompleteModule}from "@angular/material/autocomplete";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import {MatSelectModule} from '@angular/material/select';
 import {MatChipsModule} from '@angular/material/chips';
-import { DoodlePageComponent } from './components/dynamic/doodle-page/doodle-page.component';
+import { DoodlePageComponent } from './components/dynamic/pictures/doodle-page.component';
 import { GuidePageComponent } from './components/static/guide-page/guide-page.component';
 import { StudentOrgPageComponent } from './components/static/student-org-page/student-org-page.component';
 import { ContactNovosComponent } from './components/dynamic/contact-novos/contact-novos.component';
 import { CalendarCompComponent } from './components/dynamic/calendar-comp/calendar-comp.component';
 import { SignUpComponent } from './components/dynamic/sign-up/sign-up.component';
 import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CatalystComponent } from './components/static/catalyst/catalyst.component';
+import { EasterEggComponent } from './components/static/easter-egg/easter-egg.component';
 
 import { AuthInterceptorService } from './components/services/auth-interceptor.service';
 
@@ -69,6 +71,8 @@ import { AuthInterceptorService } from './components/services/auth-interceptor.s
     ContactNovosComponent,
     SignUpComponent,
     PostsComponent,
+    CatalystComponent,
+    EasterEggComponent,
   ],
   imports: [
     BrowserModule,

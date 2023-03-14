@@ -5,12 +5,25 @@ mat-toolbar {
       color: white;
       text-decoration: none;
       &.active-link {
-        color: rgba(109, 105, 105, 0.348);
+        color: rgba(152, 16, 16, 0.348);
       }
       span {
         margin-left: 24px;
       }
     }
+  }
+
+  .easter_egg{
+    color: rgb(63, 81, 181);
+    background-color: rgb(63, 81, 181);
+    border-radius: 100%;
+    transition: none;
+    font-size: 25%;
+    
+
+  }
+  #more_egg{
+    color: rgb(98, 95, 99);
   }
 
   #complicated{
@@ -22,7 +35,7 @@ mat-toolbar {
     padding: 0;
   }
   .dropresource{
-    background-color: rgb(63, 81, 181);
+  background-color: rgb(63, 81, 181);
   color: white;
   font-size: 20px;
   border: none;
