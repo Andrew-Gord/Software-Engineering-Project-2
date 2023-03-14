@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { LeaderboardItem } from '../../models/Leaderboard.interface';
 import { LeaderboardService } from '../../services/leaderboard.service';
 
@@ -9,12 +10,13 @@ import { LeaderboardService } from '../../services/leaderboard.service';
 })
 export class LeaderboardPageComponent implements OnInit {
 
-  post!: LeaderboardItem[];
+  post$:Observable< LeaderboardItem[]>;
 
   constructor(private lbService: LeaderboardService){}
 
   ngOnInit() {
-    this.lbService.fetchAll();
+    this.post$ = this.lbService.fetchAll();
+    console.log(this.post$);
   }
 
 

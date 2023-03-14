@@ -16,9 +16,6 @@ export class HamPageComponent {
 
   ngOnInit(){
     this.userId = this.authService.userId;
-    this.authService.isUserLoggedIn$.subscribe((isLoggedIn)=>{
-      this.isAuthenticated = isLoggedIn;
-    })
   }
 
     

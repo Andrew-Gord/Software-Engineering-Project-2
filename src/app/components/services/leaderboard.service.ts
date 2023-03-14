@@ -7,11 +7,13 @@ import { User } from '../models/User';
 import { ErrorHandlerService } from './error-handler.service';
 
 
-@Injectable({providedIn: 'root'})
+@Injectable({
+  providedIn: 'root'
+})
 export class LeaderboardService{
 
   constructor(private http: HttpClient,private errorHandlerService:ErrorHandlerService) {}
-  public LeaderData!: LeaderboardItem[]
+  
 
   private url = 'http://localhost:3000/leaderboard';
 
@@ -20,15 +22,14 @@ export class LeaderboardService{
   };
 
   fetchAll(): Observable<LeaderboardItem[]> {
-    console.log("check");
     return this.http.get<LeaderboardItem[]>(this.url);
   }
 
-  updateBoard(formData: string,userId: User["id"]): Observable<LeaderboardItem> {
+  updateBoard(column: string,userId: User["id"]): Observable<LeaderboardItem> {
     console.log(userId);
     return this.http.post<LeaderboardItem>(this.url,
       {
-        column:formData,
+        column:column,
         id:userId
       },this.httpOptions).pipe(first(),
         catchError(this.errorHandlerService.handleError<LeaderboardItem>("updateBoard"))

@@ -32,7 +32,7 @@ const routes: Routes = [
   { path: "resources", component: NearbyResourcesPageComponent },
   { path: "calendar", component: CalendarPageComponent, canActivate:[AuthGuardService] },
   { path: "chat", component: ChatPageComponent, canActivate:[AuthGuardService] },
-  { path: "leaderboard", component: LeaderboardPageComponent, canActivate:[AuthGuardService] },
+  { path: "leaderboard", component: LeaderboardPageComponent },
   { path: "dorm", component: DormPageComponent },
   { path: "facilities", component: FacilitiesPageComponent },
   { path: "faculty", component: FacultyPageComponent },
