@@ -26,7 +26,6 @@ export class LeaderboardService{
   }
 
   updateBoard(column: string,userId: User["id"]): Observable<LeaderboardItem> {
-    console.log(userId);
     return this.http.post<LeaderboardItem>(this.url,
       {
         column:column,

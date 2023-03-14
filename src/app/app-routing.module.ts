@@ -30,9 +30,9 @@ const routes: Routes = [
   
   { path: "home", component: HomePageComponent },
   { path: "resources", component: NearbyResourcesPageComponent },
-  { path: "calendar", component: CalendarPageComponent, canActivate:[AuthGuardService] },
+  { path: "calendar", component: CalendarPageComponent},
   { path: "chat", component: ChatPageComponent, canActivate:[AuthGuardService] },
-  { path: "leaderboard", component: LeaderboardPageComponent },
+  { path: "leaderboard", component: LeaderboardPageComponent,canActivate:[AuthGuardService]  },
   { path: "dorm", component: DormPageComponent },
   { path: "facilities", component: FacilitiesPageComponent },
   { path: "faculty", component: FacultyPageComponent },

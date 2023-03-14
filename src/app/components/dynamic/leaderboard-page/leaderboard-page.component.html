@@ -2,20 +2,22 @@
     <h1 >Leaderboard</h1>
     <div *ngFor="let class of post$| async" class="group">
         <p class="user"> {{class.username}}</p>
-        <img src="../assets/Imgs/cute-dino.jpg" alt="Can't load" *ngIf="class.classAdd" class="star">
-        <img src="../assets/Imgs/meme-1.jpg" alt="Can't load" *ngIf="!class.classAdd" class="x">
-        <img src="../assets/Imgs/cute-dino.jpg" alt="Can't load" *ngIf="class.dormChoice" class="star">
-        <img src="../assets/Imgs/meme-1.jpg" alt="Can't load" *ngIf="!class.dormChoice" class="x">
-        <img src="../assets/Imgs/cute-dino.jpg" alt="Can't load" *ngIf="class.hamVisit" class="star">
-        <img src="../assets/Imgs/meme-1.jpg" alt="Can't load" *ngIf="!class.hamVisit" class="x">
-        <img src="../assets/Imgs/cute-dino.jpg" alt="Can't load" *ngIf="class.facilVis" class="star">
-        <img src="../assets/Imgs/meme-1.jpg" alt="Can't load" *ngIf="!class.facilVis" class="x">
-        <img src="../assets/Imgs/cute-dino.jpg" alt="Can't load" *ngIf="class.faculCheck" class="star">
-        <img src="../assets/Imgs/meme-1.jpg" alt="Can't load" *ngIf="!class.faculCheck" class="x">
-
+        <div class="container">
+        <img src="../assets/Imgs/star.png" alt="Can't load" *ngIf="class.classAdd" class="star">
+        <img src="../assets/Imgs/x.png" alt="Can't load" *ngIf="!class.classAdd" class="x">
+        <img src="../assets/Imgs/star.png" alt="Can't load" *ngIf="class.dormChoice" class="star">
+        <img src="../assets/Imgs/x.png" alt="Can't load" *ngIf="!class.dormChoice" class="x">
+        <img src="../assets/Imgs/star.png" alt="Can't load" *ngIf="class.hamVisit" class="star">
+        <img src="../assets/Imgs/x.png" alt="Can't load" *ngIf="!class.hamVisit" class="x">
+        <img src="../assets/Imgs/star.png" alt="Can't load" *ngIf="class.facilVis" class="star">
+        <img src="../assets/Imgs/x.png" alt="Can't load" *ngIf="!class.facilVis" class="x">
+        <img src="../assets/Imgs/star.png" alt="Can't load" *ngIf="class.faculCheck" class="star">
+        <img src="../assets/Imgs/x.png" alt="Can't load" *ngIf="!class.faculCheck" class="x">
+        </div>
     </div>
 </div>
 <div class="right">
+
     <h2>Tasks</h2>
     <h3>Task 1:</h3>
     Pick classes and add them to the calendar!

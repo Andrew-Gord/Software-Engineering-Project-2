@@ -21,7 +21,6 @@ export class HamPageComponent {
     
 
   updateBoard(){
-    console.log("check");
     this.leadrBoardService.updateBoard("hamVisit",this.userId);
   }
 }
