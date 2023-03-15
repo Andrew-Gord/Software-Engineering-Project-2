@@ -24,21 +24,20 @@
 
 
     }
-
-    .log{
-      min-height: 100vh;
-      min-width: 100vw;
-      background-image: url('../../../../assets/Imgs/soft_white.avif');
-      background-size: cover;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-position: center;
-      color: white;
-      position: relative;
-      background-position-x: center;
-      margin: auto;
+    .heading{
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
   }
-
+  #title{
+      margin-left: 25%;
+      margin-top: 2%;
+      font-size: 40px;
+      
+  }
+  .full_header{
+    padding-top: 3%;
+  }
 
 .body{
   margin-left: 20%;
