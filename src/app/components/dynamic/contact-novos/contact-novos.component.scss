@@ -144,6 +144,12 @@
     background: #3B5998;
     color: white;
     }
+    @media only screen and (min-width: 481px) and (max-width: 768px) {
+     .pageContent, .row, .column {
+        width: 50%;
+        height: 320px;
+      }
+     }
 
 
 
