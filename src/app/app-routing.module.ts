@@ -50,6 +50,7 @@ const routes: Routes = [
   {path: "posts", component: PostsComponent},
   {path: "catalyst", component: CatalystComponent},
   {path: "easter", component: EasterEggComponent},
+  {path: "login", component: LoginPageComponent},
 
   { path: "**", redirectTo: ""},
 ];

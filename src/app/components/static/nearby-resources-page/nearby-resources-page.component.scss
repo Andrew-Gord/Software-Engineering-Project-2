@@ -13,6 +13,17 @@
     padding-bottom: 1%;
 
   }
+  .heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+#title{
+    margin-left: 18%;
+    margin-top: 2%;
+    font-size: 40px;
+    
+}
   .pageContent{
       display: flex;
       justify-content: center;

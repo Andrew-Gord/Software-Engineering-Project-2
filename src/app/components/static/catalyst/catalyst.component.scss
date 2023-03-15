@@ -18,3 +18,17 @@
     font-size: 30px;
 
 }
+.heading{
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+  }
+  #title{
+      margin-left: 10%;
+      margin-top: 2%;
+      font-size: 36px;
+
+  }
+  .full_header{
+      padding-top: 4%;
+  }
