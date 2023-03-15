@@ -46,7 +46,7 @@ const routes: Routes = [
   { path: "meme", component: MemePageComponent },
   {path: "connectNo", component: ContactNovosComponent},
   {path: "signup",component:SignUpComponent},
-  {path: "doodle", component:DoodlePageComponent},
+  {path: "pictures", component:DoodlePageComponent},
   {path: "posts", component: PostsComponent},
   {path: "catalyst", component: CatalystComponent},
   {path: "easter", component: EasterEggComponent},
