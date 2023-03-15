@@ -1,12 +1,14 @@
 .heading{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: left;
   margin-top: 4%;
   padding-left: 3%;
 }
 
-
+.pic{
+  float: left;
+}
 .link{
     font: bold 11px Arial;
   text-decoration: none;
