@@ -14,6 +14,9 @@
   text-decoration: none;
 
 }
+.logo_image{
+  padding-top: 0%;
+}
 .text{
     padding: auto;
     padding-left: 5%;
@@ -22,7 +25,17 @@
 }
 #title{
   margin-left: 20%;
-  margin-top: 2%;
   font-size: 40px;
+  padding-left: 3%;
+  padding-top: 2%;
   
 }
+.full_header{
+  padding-top: 1%;
+}
+.heading{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
