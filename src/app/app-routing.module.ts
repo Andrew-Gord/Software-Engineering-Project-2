@@ -20,6 +20,7 @@ import { MemePageComponent } from './components/dynamic/meme-page/meme-page.comp
 import { ContactNovosComponent } from './components/dynamic/contact-novos/contact-novos.component';
 import { SignUpComponent } from './components/dynamic/sign-up/sign-up.component';
 import { PostsComponent } from './components/dynamic/posts/posts.component';
+import { AuthGuardService } from './components/services/auth-guard.service';
 import { CatalystComponent } from './components/static/catalyst/catalyst.component';
 import { EasterEggComponent } from './components/static/easter-egg/easter-egg.component';
 
@@ -32,17 +33,16 @@ const routes: Routes = [
   
   { path: "home", component: HomePageComponent },
   { path: "resources", component: NearbyResourcesPageComponent },
-  { path: "calendar", component: CalendarPageComponent },
-  { path: "chat", component: ChatPageComponent },
-  { path: "leaderboard", component: LeaderboardPageComponent },
+  { path: "calendar", component: CalendarPageComponent},
+  { path: "chat", component: ChatPageComponent, canActivate:[AuthGuardService] },
+  { path: "leaderboard", component: LeaderboardPageComponent,canActivate:[AuthGuardService]  },
   { path: "dorm", component: DormPageComponent },
   { path: "facilities", component: FacilitiesPageComponent },
   { path: "faculty", component: FacultyPageComponent },
   { path: "ham", component: HamPageComponent },
   { path: "guide", component: GuidePageComponent },
-  { path: "doodle", component: DoodlePageComponent },
   { path: "stuorg", component: StudentOrgPageComponent },
-  { path: "profile", component: ProfilePageComponent },
+  { path: "profile", component: ProfilePageComponent, canActivate:[AuthGuardService] },
   { path: "meme", component: MemePageComponent },
   {path: "connectNo", component: ContactNovosComponent},
   {path: "signup",component:SignUpComponent},

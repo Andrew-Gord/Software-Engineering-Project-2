@@ -10,7 +10,11 @@
     </a>
   </span>
   <span>
-    <a routerLinkActive="active-link" routerLink="/login" id="complicated"> Log in</a>
+
+    <a routerLinkActive="active-link" routerLink="/" id="complicated" *ngIf="!isAuthenticated"> Log in</a>
+  </span>
+  <span>
+    <a href="" id="complicated" *ngIf="isAuthenticated" (click)="logout()"> Log out</a>
   </span>
   <span><a routerLinkActive="active-link" routerLink="/leaderboard">Leaderboard</a></span>
 

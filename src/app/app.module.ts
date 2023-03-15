@@ -41,10 +41,11 @@ import { StudentOrgPageComponent } from './components/static/student-org-page/st
 import { ContactNovosComponent } from './components/dynamic/contact-novos/contact-novos.component';
 import { CalendarCompComponent } from './components/dynamic/calendar-comp/calendar-comp.component';
 import { SignUpComponent } from './components/dynamic/sign-up/sign-up.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CatalystComponent } from './components/static/catalyst/catalyst.component';
 import { EasterEggComponent } from './components/static/easter-egg/easter-egg.component';
 
+import { AuthInterceptorService } from './components/services/auth-interceptor.service';
 
 
 @NgModule({
@@ -94,7 +95,13 @@ import { EasterEggComponent } from './components/static/easter-egg/easter-egg.co
       useFactory:adapterFactory,
     })
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

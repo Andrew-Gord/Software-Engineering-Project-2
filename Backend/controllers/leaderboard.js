@@ -1,5 +1,4 @@
 const { validationResult } = require('express-validator');
-
 const Leaderboard = require('../models/leaderboard');
 
 exports.fetchAll = async (req, res, next) => {
@@ -7,6 +6,7 @@ exports.fetchAll = async (req, res, next) => {
     const [allPosts] = await Leaderboard.fetchAll();
     res.status(200).json(allPosts);
   } catch (err) {
+    console.log(err);
     if (!err.statusCode) {
       err.statusCode = 500;
     }
@@ -14,32 +14,22 @@ exports.fetchAll = async (req, res, next) => {
   }
 };
 
-exports.postLeaderboard = async (req, res, next) => {
+exports.updateBoard = async (req, res, next) => {
+  conesole.log("check");
   const errors = validationResult(req);
-
+  console.log(errors);
   if (!errors.isEmpty()) return;
-  
-  const user = req.body.user;
-  const completePoints = req.body.completePoints;
-  const classAdd = req.body.classAdd;
-  const dormChoice = req.body.dormChoice;
-  const hamVisit = req.body.hamVisit;
-  const facilVis = req.body.facilVis;
-  const faculCheck = req.body.faculCheck;
+    console.log("check2")
+    const id = req.body.id;
+    const column = req.body.column;
 
   try {
-    const post = {
-        user: user,
-        completePoints: completePoints,
-        classAdd: classAdd,
-        dormChoice: dormChoice,
-        hamVisit: hamVisit,
-        facilVis: facilVis,
-        faculCheck: faculCheck,
-    };
-    const result = await Leaderboard.save(post);
+
+    const result = await Leaderboard.update(column,id);
+
     res.status(201).json({ message: 'Posted!' });
   } catch (err) {
+    console.log(err)
     if (!err.statusCode) {
       err.statusCode = 500;
     }

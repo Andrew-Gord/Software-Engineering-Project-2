@@ -11,10 +11,10 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  private url = "http://localhost:3000/auth";
+  private url = "https://softengback-production.up.railway.app/auth";
 
-  isUserLoggedIn$ = new BehaviorSubject<Boolean>(false);
-  userId: Pick<User, "id">;
+  isUserLoggedIn$ = new BehaviorSubject<boolean>(false);
+  userId: User["id"];
 
   httpOptions: {headers:HttpHeaders}={
     headers: new HttpHeaders({"Content-Type" : "application/json"})
@@ -31,17 +31,17 @@ export class AuthService {
   }
 
   login(email : Pick<User,"email">,password : Pick<User,"password">) :Observable<{
-    token:string; userId: Pick<User, "id">}> {
+    token:string; userId: User["id"]}> {
     return this.http.post( `${this.url}/login`,{email, password}, this.httpOptions)
     .pipe(
       first(Object),
-       tap( (tokenObject : {token: string; userId: Pick<User,"id">}) =>  {
+       tap((tokenObject : {token: string; userId:User["id"]}) =>  {
         this.userId = tokenObject.userId;
         localStorage.setItem("token",tokenObject.token);
         this.isUserLoggedIn$.next(true);
         this.router.navigate(["home"]);
       }),
-      catchError(this.errorHandlerService.handleError<{token:string; userId: Pick<User,"id">}>("login")),
+      catchError(this.errorHandlerService.handleError<{token:string; userId: User["id"]}>("login")),
     );
   }
 
