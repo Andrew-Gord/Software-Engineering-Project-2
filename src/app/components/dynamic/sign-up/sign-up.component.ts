@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl,FormGroup,Validator, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
 
@@ -10,7 +11,9 @@ import { AuthService } from '../../services/auth.service';
 })
 export class SignUpComponent {
   signupForm: FormGroup; 
-  constructor(private authService: AuthService){  }
+  ifSignup:any;
+ 
+  constructor(private authService: AuthService,private  router: Router){  }
 
   
   ngOnInit():void {
@@ -26,6 +29,14 @@ export class SignUpComponent {
   }
 
   signup():void{
-    this.authService.signup(this.signupForm.value).subscribe((msg)=>console.log(msg));
+    this.authService.signup(this.signupForm.value).subscribe((msg)=>this.dest(msg));
+
   }
+  dest(anything:any){
+    console.log(anything);
+    if(anything.message == "User registered"){
+      this.router.navigate([""])
+    }
+  }
+
 }
