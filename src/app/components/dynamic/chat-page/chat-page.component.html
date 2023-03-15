@@ -1,4 +1,3 @@
-<app-posts (create) = "createPost()"></app-posts>
 
 <mat-card *ngFor="let post of posts$ | async">
     <button mat-icon-button  *ngIf="post.poster == userId" (click)="deletePost(post.id)"> <mat-icon  color="warn" class="button"> delete</mat-icon></button>
@@ -7,4 +6,4 @@
     <div class="postdata"> {{post.created}}</div>
     <div class="postbody"> {{post.body}}</div> 
 </mat-card>
- 
+<app-posts (create) = "createPost()"></app-posts>
