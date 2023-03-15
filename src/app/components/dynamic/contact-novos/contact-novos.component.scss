@@ -1,15 +1,17 @@
 
   .pageContent{
       display: flex;
-      padding: 1%;
+     padding-top: 3%;
   }
   body{
     margin-left: 5%;
   }
+  
   .header{
 
     padding-left: 37%;
     padding-right: 20%;
+
 
   }
 
@@ -63,9 +65,44 @@
 
   padding-left: 30%;
   
-  padding-top: 5px;
+  padding-top: 5%;
 }
 .socials{
   padding-left: 33%;
 }
+.heading{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin-top: 1%;
+}
+#title{
+  margin-left: 16%;
+  margin-top: 2%;
+  font-size: 40px;
+}
+* {
+  box-sizing: border-box;
+}
 
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  padding-left: 10%;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  padding-bottom: 10%;
+}
+.column_space{
+  float: left;
+  width: 33.33%;
+  padding-left: 20%;
+  padding-top: .4%;
+  
+}

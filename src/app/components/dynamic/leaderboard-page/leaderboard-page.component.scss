@@ -34,3 +34,17 @@
     text-align: center;
     background: lightblue;
 }
+
+.log{
+    min-height: 105vh;
+    min-width: 100vw;
+    background-image: url('../../../../assets/Imgs/background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-position-x: center;
+    margin: auto;
+}
+    
